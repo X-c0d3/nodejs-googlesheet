@@ -15,8 +15,9 @@ const auth = new JWT({
   scopes: 'https://www.googleapis.com/auth/spreadsheets',
 });
 
+const sheets = google.sheets({ version: 'v4', auth });
+
 const getStockData = async (range?: string) => {
-  const sheets = google.sheets({ version: 'v4', auth });
   const stockData = await sheets.spreadsheets.values.get({
     spreadsheetId,
     range: range || 'สินค้านำเข้ามาขาย!A8:Z',
@@ -32,7 +33,6 @@ const getStockData = async (range?: string) => {
 };
 
 const getProductInfo = async (rang?: string) => {
-  const sheets = google.sheets({ version: 'v4', auth });
   const productInfo = await sheets.spreadsheets.values.get({
     spreadsheetId,
     range: rang || 'รายการสินค้า!A2:Z',
