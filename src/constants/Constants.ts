@@ -29,4 +29,35 @@ const HEADER = {
   },
 };
 
-export { AppConfig, HEADER };
+const productHeaders = ['productCode', 'productName'];
+
+const stockHeaders = [
+  'productName',
+  'transportType',
+  'productPriceCNY',
+  'quantity',
+  'productTotalPriceCYN',
+  'productActualPriceCYN',
+  'shippingCostCN',
+  'shippingCostTH',
+  'ExchangeRate',
+  'productCoust',
+  'markup',
+  'productCoustPcs',
+  'selledPrice',
+  'fee',
+  'moneyReceived',
+  'profit',
+  'profitPercentage',
+  'profitAll',
+  'productCostIncluedProfit',
+  'productStatus',
+  'importedDate',
+  'importedCount',
+  'parcelNumber',
+  'orderNo',
+  'productLink',
+  'productCode',
+];
+
+export { AppConfig, HEADER, productHeaders, stockHeaders };
